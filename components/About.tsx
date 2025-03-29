@@ -8,28 +8,28 @@ const roboto = Roboto({
 
 const About = () => {
     return (
-        <section className="min-h-screen w-full z-30cd ">
-            <div className="max-w-6xl mx-auto">
+        <section className="min-h-screen w-full z-30   py-20 px-4 md:px-8 lg:px-16">
+            <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col gap-4">
 
                     <div className="space-y-2">
-                        <p className="relative z-30 bg-gradient-to-b from-blue-500 to-neutral-500 bg-clip-text  md:text-6xl text-2xl font-bold">
+                        <p className="relative z-30  bg-gradient-to-b from-blue-500 to-neutral-500 bg-clip-text text-transparent text-5xl md:text-7xl lg:text-8xl font-bold">
                             Nice to meet you !
                         </p>
                     </div>
 
                     {/* Main content */}
-                    <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="relative">
+                    <div className="mt-12 grid grid-cols-1 md:grid-cols-2 space-x-16 items-center">
+                        <div className="relative ">
                             <img
                                 src={profile.src}
                                 alt="Pritam Chakroborty"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full  bg-none rounded-full shadow-lg shadow-neutral-500/50 dark:shadow-neutral-900/50"
                             />
                         </div>
 
                         {/* Description */}
-                        <div className={`${roboto.className}relative font-extralight z-30 text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl`}>
+                        <div className={`${roboto.className}relative font-extralight z-30 pt-7 text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl`}>
                             <p>
                                 I'm a FullStack Developer from Kolkata (India). I completed Frontend Carrer Path
                                 from Scrimba in 2022 and then persued my Fullstack career from 100xdevs.
