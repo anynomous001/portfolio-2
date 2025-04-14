@@ -1,8 +1,11 @@
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { HiDocument, HiLocationMarker, HiPhone, HiMail } from "react-icons/hi";
 
+
+
 const Footer = () => {
     return (
+
         <footer className="flex justify-center items-center w-full text-slate-200 h-[300px] py-8 px-4 md:px-8 lg:px-16">
             <div className="max-w-6xl mx-auto">
                 <div className="relative z-20 flex flex-col items-center gap-6 text-xl font-extralight">
@@ -53,6 +56,7 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
+
     );
 };
 

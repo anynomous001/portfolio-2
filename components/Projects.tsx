@@ -6,6 +6,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Timeline } from "./ui/timeline";
+import { Button } from "./ui/button";
 import quizOne from '.././public/quizOne.jpeg'
 import quizTwo from '.././public/quizTwo.jpeg'
 import playTMOne from '.././public/playTMOne.jpeg'
@@ -19,9 +20,7 @@ import {
     SiReactrouter,
     SiCss3
 } from 'react-icons/si';
-
-
-
+import { motion } from "framer-motion";
 
 const Projects = () => {
     const data = [
@@ -43,8 +42,7 @@ const Projects = () => {
                         </p>
                     </div>
 
-
-                    <span className="flex items-center w-full pt-6  gap-4 relative font-extralight z-30 text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl">
+                    <span className="flex items-center w-full pt-6 gap-4 relative font-extralight text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl">
                         <SiTypescript className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
                         <SiNextdotjs className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
                         <SiNginx className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
@@ -54,8 +52,25 @@ const Projects = () => {
                         <SiRecoil className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
                         <SiTailwindcss className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
                         <SiDocker className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
-
                     </span>
+
+                    <div className="flex gap-4 pt-4 relative z-30">
+                        <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE]  bg-white transform hover:cursor-pointer  hover:scale-105 hover:bg-slate-200   transition-all duration-300">
+                            <Link href="https://playTM.vercel.app"
+                                target="_blank">
+                                Live
+                            </Link>
+                        </button>
+                        <button className="px-4 py-2 text-xl font-bold rounded-2xl bg-[#457FDE]  text-white transform hover:cursor-pointer hover:scale-105 hover:bg-[#457FDE]   transition-all duration-300">
+                            <Link
+                                href="https://github.com/yourusername/playTM"
+                                target="_blank"
+                            >
+                                Github
+                            </Link>
+                        </button>
+                    </div>
+
                     <div className="grid grid-cols-2 gap-4 pt-4">
                         <Image
                             src={playTMOne}
@@ -107,7 +122,6 @@ const Projects = () => {
                         </p>
                     </div>
 
-
                     <span className="flex items-center w-full pt-6  gap-4 relative font-extralight z-30 text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl">
                         <SiReact className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
                         <SiTypescript className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
@@ -117,8 +131,25 @@ const Projects = () => {
                         <SiTailwindcss className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
                         <SiDocker className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
                         <SiMongodb className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
-
                     </span>
+
+                    <div className="flex gap-4 pt-4 relative z-30">
+                        <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE]  bg-white transform hover:cursor-pointer  hover:scale-105 hover:bg-slate-200   transition-all duration-300">
+                            <Link href="https://playTM.vercel.app"
+                                target="_blank">
+                                Live
+                            </Link>
+                        </button>
+                        <button className="px-4 py-2 text-xl font-bold rounded-2xl bg-[#457FDE]  text-white transform hover:cursor-pointer hover:scale-105 hover:bg-[#457FDE]   transition-all duration-300">
+                            <Link
+                                href="https://github.com/yourusername/playTM"
+                                target="_blank"
+                            >
+                                Github
+                            </Link>
+                        </button>
+                    </div>
+
                     <div className="grid grid-cols-2 gap-4 pt-4">
                         <Image
                             src={readium}
@@ -168,13 +199,29 @@ const Projects = () => {
                         </p>
                     </div>
 
-
                     <span className="flex items-center w-full pt-6  gap-4 relative font-extralight z-30 text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl">
                         <SiReact className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
                         <SiReactrouter className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
                         <SiCss3 className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" />
-
                     </span>
+
+                    <div className="flex gap-4 pt-4 relative z-30">
+                        <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE]  bg-white transform hover:cursor-pointer  hover:scale-105 hover:bg-slate-200   transition-all duration-300">
+                            <Link href="https://playTM.vercel.app"
+                                target="_blank">
+                                Live
+                            </Link>
+                        </button>
+                        <button className="px-4 py-2 text-xl font-bold rounded-2xl bg-[#457FDE]  text-white transform hover:cursor-pointer hover:scale-105 hover:bg-[#457FDE]   transition-all duration-300">
+                            <Link
+                                href="https://github.com/yourusername/playTM"
+                                target="_blank"
+                            >
+                                Github
+                            </Link>
+                        </button>
+                    </div>
+
                     <div className="grid grid-cols-2 gap-4 pt-4">
                         <Image
                             src={quizOne}
@@ -211,10 +258,10 @@ const Projects = () => {
     ];
     return (
 
-        <div>
+        <div data-aos="fade-up">
             <Timeline data={data} />
         </div>
     );
 };
 
-export default Projects; 
+export default Projects;
