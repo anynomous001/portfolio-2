@@ -3,7 +3,7 @@
 import { Project, projects } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Timeline } from "./ui/timeline";
 import { Button } from "./ui/button";
@@ -28,6 +28,43 @@ import {
     SiCss3, SiTurborepo, SiZapier, SiGooglesheets, SiSlack, SiGmail, SiApachekafka, SiPrisma, SiJsonwebtokens
 } from 'react-icons/si';
 import { motion } from "framer-motion";
+
+
+import React from "react";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+const people = [
+    {
+        id: 1,
+        name: "John Doe",
+        designation: "Software Engineer",
+    },
+    {
+        id: 2,
+        name: "Robert Johnson",
+        designation: "Product Manager",
+    },
+    {
+        id: 3,
+        name: "Jane Smith",
+        designation: "Data Scientist",
+    },
+    {
+        id: 4,
+        name: "Emily Davis",
+        designation: "UX Designer",
+    },
+    {
+        id: 5,
+        name: "Tyler Durden",
+        designation: "Soap Developer",
+    },
+    {
+        id: 6,
+        name: "Dora",
+        designation: "The Explorer",
+    },
+];
+
 
 const Projects = () => {
     const data = [
@@ -113,18 +150,11 @@ const Projects = () => {
                     </div>
 
                     <span className="flex items-center flex-wrap w-full pt-6 gap-4 relative font-extralight text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl">
-                        <SiNextdotjs className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Next.js" />
-                        <SiReact className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="React" />
-                        <SiTypescript className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="TypeScript" />
-                        <SiTailwindcss className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="TailwindCSS" />
-                        <SiOpenai className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="OpenAI" />
-                        <SiRedis className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Redis" />
-                        <SiNodedotjs className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Node.js" />
-                        <SiVercel className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Vercel" />
-                        <SiEslint className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="ESLint" />
-                        <SiTurborepo className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Turbopack" />
-                    </span>
 
+                    </span>
+                    <div className="flex flex-row items-center justify-center mb-10 w-full">
+                        <AnimatedTooltip items={people} />
+                    </div>
                     <div className="flex gap-4 pt-4 relative z-30">
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE]  bg-white transform hover:cursor-pointer  hover:scale-105 hover:bg-slate-200   transition-all duration-300">
                             <Link href="https://playTM.vercel.app"
@@ -278,20 +308,7 @@ const Projects = () => {
                             height={500}
                             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                         />
-                        <Image
-                            src="https://assets.aceternity.com/templates/startup-3.webp"
-                            alt="startup template"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                        <Image
-                            src="https://assets.aceternity.com/templates/startup-4.webp"
-                            alt="startup template"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
+
                     </div>
                 </div>
             ),
