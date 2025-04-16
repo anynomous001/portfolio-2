@@ -6,13 +6,82 @@ import { MdEmail } from 'react-icons/md';
 import { Spotlight } from "@/components/ui/spotlight"
 // import resume from '../public/resume.pdf'
 import { Roboto } from 'next/font/google'
-
+import { FloatingDockDesktop } from './ui/floating-dock';
+import {
+    IconBrandGithub,
+    IconBrandX,
+    IconExchange,
+    IconHome,
+    IconNewSection,
+    IconTerminal2,
+} from "@tabler/icons-react";
+import Image from 'next/image';
 const roboto = Roboto({
     weight: ['400', '700', '900'],
     subsets: ['latin'],
 })
 
 const HeroDiv = () => {
+    const links = [
+        {
+            title: "Home",
+            icon: (
+                <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+
+        {
+            title: "Products",
+            icon: (
+                <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+        {
+            title: "Components",
+            icon: (
+                <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+        {
+            title: "Aceternity UI",
+            icon: (
+                <Image
+                    src="https://assets.aceternity.com/logo-dark.png"
+                    width={20}
+                    height={20}
+                    alt="Aceternity Logo"
+                />
+            ),
+            href: "#",
+        },
+        {
+            title: "Changelog",
+            icon: (
+                <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+
+        {
+            title: "Twitter",
+            icon: (
+                <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+        {
+            title: "GitHub",
+            icon: (
+                <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+            ),
+            href: "#",
+        },
+    ];
+
+
     return (
         <>
             <Spotlight
@@ -40,7 +109,7 @@ const HeroDiv = () => {
                     <Link href='https://mail.google.com/mail/mu/mp/354/#pr'><MdEmail className='w-12 h-12 text-neutral-500 sm:w-16 sm:h-16 ' /></Link>
                 </div> */}
 
-                    <div className="mt-6 pt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-4">
+                    {/* <div className="mt-6 pt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-4">
                         <a className="bg-slate-900 dark:bg-white dark:text-black no-underline flex space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 p-px font-semibold text-white px-4 py-2 h-14 w-full items-center justify-center rounded-2xl text-center text-sm sm:w-52" target="_blank" href="https://pro.aceternity.com">
                             Resume
                         </a>
@@ -48,7 +117,8 @@ const HeroDiv = () => {
                             Socials
                         </a>
 
-                    </div>
+                    </div> */}
+                    <FloatingDockDesktop items={links} />
                 </div>
 
 
