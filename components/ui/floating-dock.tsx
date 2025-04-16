@@ -30,20 +30,27 @@ export const FloatingDockDesktop = ({
 
     return (
         <motion.div
-            onMouseMove={(e) => mouseY.set(e.pageY)}
+            onMouseMove={(e) => mouseY.set(e.clientY)}
             onMouseLeave={() => mouseY.set(Infinity)}
             className={cn(
-                "fixed left-10 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-4 items-center h-min",
-                "rounded-2xl bg-gray-50 dark:bg-transparent py-4 px-3",
+                "fixed left-20 top-0 h-screen hidden md:flex flex-col items-center justify-center  ",
+                "bg-gray-50 dark:bg-transparent py-4 px-3 ",
                 className
             )}
+            style={{
+                width: "88px", // Match expanded icon size + padding
+                marginLeft: "-24px" // Compensate for icon expansion
+            }}
         >
-            {items.map((item) => (
-                <VerticalIconContainer mouseY={mouseY} key={item.title} {...item} />
-            ))}
+            <div className="space-y-4">
+                {items.map((item) => (
+                    <VerticalIconContainer mouseY={mouseY} key={item.title} {...item} />
+                ))}
+            </div>
         </motion.div>
     );
 };
+
 
 function VerticalIconContainer({
     mouseY,
@@ -87,7 +94,7 @@ function VerticalIconContainer({
                 style={{ width: size, height: size }}
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
-                className="rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative"
+                className="rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center my-2 relative"
             >
                 <AnimatePresence>
                     {hovered && (
