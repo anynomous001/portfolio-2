@@ -20,6 +20,7 @@ import PictureWhisperAI3 from '@/public/PictureWhisperAI-3.jpeg'
 import zapier1 from '@/public/zapier1.jpeg'
 import zapier2 from '@/public/zapier2.jpeg'
 import zapier3 from '@/public/zapier3.jpeg'
+import { pictureWhisperLinks, playTMLinks, quizzicleLinks, workflowAutomationLinks } from '@/components/ui/project-logostack'
 
 import {
     SiTypescript, SiNextdotjs, SiReact, SiPostgresql, SiMongodb, SiExpress,
@@ -87,15 +88,7 @@ const Projects = () => {
                         </p>
                     </div>
 
-                    <span className="flex items-center flex-wrap w-full pt-6 gap-4 relative font-extralight text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl">
-                        <SiNextdotjs className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Next.js" />
-                        <SiNodedotjs className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Node.js" />
-                        <SiApachekafka className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Apache Kafka" />
-                        <SiPrisma className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Prisma" />
-                        <SiPostgresql className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="PostgreSQL" />
-                        <SiJsonwebtokens className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="JWT" />
-                        <SiZapier className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Zapier" />
-                    </span>
+                    <AnimatedTooltip items={workflowAutomationLinks} />
 
                     <div className="flex gap-4 pt-4 relative z-30">
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE] bg-white transform hover:cursor-pointer hover:scale-105 hover:bg-slate-200 transition-all duration-300">
@@ -149,12 +142,7 @@ const Projects = () => {
                         </p>
                     </div>
 
-                    <span className="flex items-center flex-wrap w-full pt-6 gap-4 relative font-extralight text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl">
-
-                    </span>
-                    <div className="flex flex-row items-center justify-center mb-10 w-full">
-                        <AnimatedTooltip items={people} />
-                    </div>
+                    <AnimatedTooltip items={pictureWhisperLinks} />
                     <div className="flex gap-4 pt-4 relative z-30">
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE]  bg-white transform hover:cursor-pointer  hover:scale-105 hover:bg-slate-200   transition-all duration-300">
                             <Link href="https://playTM.vercel.app"
@@ -211,16 +199,7 @@ const Projects = () => {
                         </p>
                     </div>
 
-                    <span className="flex items-center w-full pt-6 gap-4 relative font-extralight text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl">
-                        <SiReact className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="React" />
-                        <SiTypescript className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="TypeScript" />
-                        <SiAmazon className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="AWS" />
-                        <SiExpress className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Express.js" />
-                        <SiRecoil className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Recoil" />
-                        <SiTailwindcss className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="TailwindCSS" />
-                        <SiDocker className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="Docker" />
-                        <SiMongodb className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="MongoDB" />
-                    </span>
+                    <AnimatedTooltip items={playTMLinks} />
 
                     <div className="flex gap-4 pt-4 relative z-30">
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE] bg-white transform hover:cursor-pointer hover:scale-105 hover:bg-slate-200 transition-all duration-300">
@@ -270,11 +249,7 @@ const Projects = () => {
                         </p>
                     </div>
 
-                    <span className="flex items-center w-full pt-6  gap-4 relative font-extralight z-30 text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl">
-                        <SiReact className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="React" />
-                        <SiReactrouter className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="React Router" />
-                        <SiCss3 className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text" title="CSS3" />
-                    </span>
+                    <AnimatedTooltip items={quizzicleLinks} />
 
                     <div className="flex gap-4 pt-4 relative z-30">
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE]  bg-white transform hover:cursor-pointer  hover:scale-105 hover:bg-slate-200   transition-all duration-300">

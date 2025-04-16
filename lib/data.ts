@@ -1,7 +1,12 @@
 import playtm from "../public/playtm.png";
 import quizproject from "../public/Quizproject.jpg";
 import readium from "../public/readium.jpg";
-
+import {
+    SiTypescript, SiNextdotjs, SiReact, SiPostgresql, SiMongodb, SiExpress,
+    SiAmazon, SiDocker, SiNginx, SiTailwindcss, SiRecoil, SiRedux,
+    SiReactrouter, SiOpenai, SiVercel, SiRedis, SiNodedotjs, SiEslint,
+    SiCss3, SiTurborepo, SiZapier, SiGooglesheets, SiSlack, SiGmail, SiApachekafka, SiPrisma, SiJsonwebtokens
+} from 'react-icons/si';
 export interface Project {
     title: string;
     description: string;
@@ -9,8 +14,6 @@ export interface Project {
     demoLink: string;
     sourceLink: string;
 }
-
-
 
 export const projects: Project[] = [
     {
@@ -34,4 +37,4 @@ export const projects: Project[] = [
         demoLink: "https://quizzicle-demo.vercel.app",
         sourceLink: "https://github.com/yourusername/quizzicle"
     }
-]; 
+];
