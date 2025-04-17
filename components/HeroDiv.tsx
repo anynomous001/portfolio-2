@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { Roboto } from 'next/font/google'
 import { FloatingDockDesktop } from './ui/floating-dock';
@@ -10,7 +12,12 @@ import {
     IconTerminal2,
 } from "@tabler/icons-react";
 import Image from 'next/image';
-import { Spotlight } from './ui/spotlight';
+// import { Spotlight } from './ui/spotlight';
+import { Spotlight } from "./ui/spotlight-new";
+import Link from 'next/link';
+import SocialSidebar from './ui/social-sidebar';
+
+
 const roboto = Roboto({
     weight: ['400', '700', '900'],
     subsets: ['latin'],
@@ -25,7 +32,6 @@ const HeroDiv = () => {
             ),
             href: "#",
         },
-
         {
             title: "Products",
             icon: (
@@ -76,52 +82,58 @@ const HeroDiv = () => {
         },
     ];
 
+    const [isOpen, setIsOpen] = React.useState<boolean>(false)
+
+    function onClose() {
+        setIsOpen(false)
+    }
 
     return (
-        <>
-            <Spotlight
-                className="-top-40 left-40 -md:top-120 md:left-90"
-                fill="white"
-            />
-            <div className=''>
-                <div className='w-full items-center  min-h-screen flex flex-col pt-44  '>
-                    <p className={`${roboto.className} sm:text-[10rem] shadow-sm text-center leading-44 text-[30rem]  relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text  font-bold text-transparent `}>
-                        {/* <p className={`${roboto.className} text-center leading-44 text-[30rem]  sm:text-[10rem] bg-gradient-to-b from-slate-500 to-neutral-500 bg-clip-text font-bold z-20 relative text-transparent`}> */}
-                        <span className='block  '>Pritam</span>
-                        <span className='block'>Chakroborty </span>
-                    </p>
-                    <p className=" text-2xl bg-white p-2 text-center sm:text-6xl relative z-20 text-black sm:mt-8 w-[75%]  font-bold ">
-                        A software engineer,I build things for the web
+        <div className="relative w-full min-h-screen">
+            <SocialSidebar isOpen={isOpen} onClose={onClose} />
+            {/* <Spotlight /> */}
+            <div className="w-full px-4 md:px-8 lg:px-16">
+                <div className="flex flex-col items-center justify-center min-h-screen pt-16 md:pt-20 lg:pt-24">
+                    {/* Name heading with responsive font sizes */}
+                    <div className="text-center">
+                        <h1 className={`${roboto.className} relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text font-bold text-transparent
+                            text-4xl sm:text-7xl md:text-[80px] lg:text-[100px] leading-tight`}>
+                            <span className="block mb-2">Pritam</span>
+                            <span className="block">Chakroborty</span>
+                        </h1>
+                    </div>
 
-                    </p>
-                    <p className=" text-2xl sm:text-7xl relative z-20    text-transparent ">
-                    </p>
-                    {/* <div className='flex space-x-4'>
-                    <Link href='https://x.com/Pritamchak001'><FaSquareXTwitter className='w-12 h-12 text-neutral-500 sm:w-16 sm:h-16 ' /></Link>
-                    <Link href='https://github.com/anynomous001 '><BsGithub className='w-12 h-12 text-neutral-500 sm:w-16 sm:h-16 ' /></Link>
-                    <a className='w-12 h-12 text-neutral-500 sm:w-16 sm:h-16 ' target="_blank" rel="noopener noreferrer">Resume</a>
-                    <Link href='https://www.linkedin.com/in/pritamchakroborty/'><FaLinkedinIn className='w-12 h-12 text-neutral-500 sm:w-16 sm:h-16 ' /></Link>
-                    <Link href='https://mail.google.com/mail/mu/mp/354/#pr'><MdEmail className='w-12 h-12 text-neutral-500 sm:w-16 sm:h-16 ' /></Link>
-                </div> */}
+                    {/* Subtitle with responsive design */}
+                    <div className="mt-6 md:mt-8 lg:mt-10 w-full max-w-3xl">
+                        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-semibold bg-white/90 dark:bg-transparent p-3transparentrounded-lg shadow-lg relative z-20 text-black dark:text-white">
+                            A software engineer, I build things for the web
+                        </p>
+                    </div>
 
-                    {/* <div className="mt-6 pt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-4">
-                        <a className="bg-slate-900 dark:bg-white dark:text-black no-underline flex space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 p-px font-semibold text-white px-4 py-2 h-14 w-full items-center justify-center rounded-2xl text-center text-sm sm:w-52" target="_blank" href="https://pro.aceternity.com">
+                    {/* Navigation - Floating dock for larger screens */}
+                    <div className="hidden lg:block mt-12 lg:mt-16">
+                        <FloatingDockDesktop items={links} />
+                    </div>
+
+                    {/* Mobile Navigation Buttons */}
+                    <div className="lg:hidden mt-8 flex flex-col items-center gap-4 w-full px-4">
+                        <Link
+                            href="/resume.pdf"
+                            target="_blank"
+                            className="bg-slate-900 dark:bg-white dark:text-black no-underline flex space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 p-px font-semibold text-white px-4 py-2 h-14 w-full items-center justify-center rounded-2xl text-center text-sm"
+                        >
                             Resume
-                        </a>
-                        <a className="bg-slate-900 dark:bg-slate-100/15  hover:bg-slate-100/30 dark:text-white no-underline flex space-x-2 group cursor-pointer relative hover:shadow-2xl transition duration-200 shadow-zinc-900 p-px font-semibold text-white px-4 py-2 h-14 w-full items-center justify-center rounded-2xl text-center text-sm sm:w-52" target="_blank" href="https://pro.aceternity.com">
-                            Socials
-                        </a>
-
-                    </div> */}
-                    <FloatingDockDesktop items={links} />
+                        </Link>
+                        <button
+                            onClick={() => setIsOpen(true)}
+                            className="flex h-14 w-full items-center hover:cursor-pointer justify-center rounded-2xl border border-transparent bg-white text-sm text-black shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 hover:shadow-lg dark:border-neutral-600 dark:bg-black dark:text-white"
+                        >
+                            Connect with me
+                        </button>
+                    </div>
                 </div>
-
-
             </div>
-
-
-
-        </>
+        </div>
     )
 }
 
