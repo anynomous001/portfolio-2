@@ -42,7 +42,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         ref={containerRef}
       >
         <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-          <h2 className=" relative font-bold z-30 sm:text-8xl bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent  mb-4 ">
+          <h2 className=" relative font-bold z-30 text-5xl  sm:text-8xl bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent  mb-4 ">
             Let me take you through my technical journey
           </h2>
           <p className=" relative font-extralight z-30 text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl">

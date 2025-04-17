@@ -9,8 +9,8 @@ const roboto = Roboto({
 
 const About = () => {
     return (
-        <section className="min-h-screen w-full z-30   py-20 px-4 md:px-8 lg:px-16">
-            <div className="max-w-7xl mx-auto">
+        <section className="min-h-screen w-full flex justify-center z-30   py-20 px-4 md:px-8 lg:px-16">
+            <div className="max-w-7xl mx-auto w-[80%] md:w-full">
                 <div className="flex flex-col gap-4">
 
                     <div className="space-y-2">

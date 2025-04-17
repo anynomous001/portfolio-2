@@ -91,13 +91,13 @@ const HeroDiv = () => {
     return (
         <div className="relative w-full min-h-screen">
             <SocialSidebar isOpen={isOpen} onClose={onClose} />
-            {/* <Spotlight /> */}
+            <Spotlight />
             <div className="w-full px-4 md:px-8 lg:px-16">
                 <div className="flex flex-col items-center justify-center min-h-screen pt-16 md:pt-20 lg:pt-24">
                     {/* Name heading with responsive font sizes */}
                     <div className="text-center">
                         <h1 className={`${roboto.className} relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text font-bold text-transparent
-                            text-4xl sm:text-7xl md:text-[80px] lg:text-[100px] leading-tight`}>
+                            text-5xl sm:text-7xl md:text-[80px] lg:text-[100px] leading-tight`}>
                             <span className="block mb-2">Pritam</span>
                             <span className="block">Chakroborty</span>
                         </h1>

@@ -29,11 +29,11 @@ export const AnimatedTooltip = ({
     };
 
     return (
-        <div className="flex items-center">
+        <div className="flex items-center flex-wrap">
             {items.map((item) => (
                 <div
                     key={item.id}
-                    className="relative mt-10 mr-2 mb-6 group"
+                    className="relative mt-4 md:mt-10 mr-2 mb-6 group"
                     onMouseEnter={() => setHoveredIndex(item.id)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
@@ -58,7 +58,7 @@ export const AnimatedTooltip = ({
 
                     <motion.div
                         whileHover={{ scale: 1.1 }}
-                        className="relative h-14 w-14 rounded-full bg-gray-200 dark:bg-transparent flex items-center justify-center  border-2 border-white cursor-pointer"
+                        className="relative h-8 w-8 p-1 md:p-0 md:h-14 md:w-14 rounded-full bg-gray-200 dark:bg-transparent flex items-center justify-center  border-2 border-white cursor-pointer"
                     >
                         <motion.div
                             className="h-full w-full flex items-center justify-center text-neutral-500 dark:text-neutral-300"
