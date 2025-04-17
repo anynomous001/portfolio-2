@@ -1,76 +1,84 @@
 "use client";
 
-import { Project, projects } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
 import { Timeline } from "./ui/timeline";
-import { Button } from "./ui/button";
 import quizOne from '.././public/quizOne.jpeg'
 import quizTwo from '.././public/quizTwo.jpeg'
 import playTMOne from '.././public/playTMOne.jpeg'
 import readium from '.././public/readiumOne.jpg'
 import playTMTwo from '.././public/playTMTwo.png'
-import portfolioOne from '.././public/portfolioOne.jpeg'
-import portfolioTwo from '.././public/portfolioTwo.jpeg'
 import PictureWhisperAI1 from '@/public/PictureWhisperAI-1.jpeg'
-import PictureWhisperAI2 from '@/public/PictureWhisperAI-2.jpeg'
 import PictureWhisperAI3 from '@/public/PictureWhisperAI-3.jpeg'
 import zapier1 from '@/public/zapier1.jpeg'
 import zapier2 from '@/public/zapier2.jpeg'
-import zapier3 from '@/public/zapier3.jpeg'
-import { pictureWhisperLinks, playTMLinks, quizzicleLinks, workflowAutomationLinks } from '@/components/ui/project-logostack'
-
-import {
-    SiTypescript, SiNextdotjs, SiReact, SiPostgresql, SiMongodb, SiExpress,
-    SiAmazon, SiDocker, SiNginx, SiTailwindcss, SiRecoil, SiRedux,
-    SiReactrouter, SiOpenai, SiVercel, SiRedis, SiNodedotjs, SiEslint,
-    SiCss3, SiTurborepo, SiZapier, SiGooglesheets, SiSlack, SiGmail, SiApachekafka, SiPrisma, SiJsonwebtokens
-} from 'react-icons/si';
-import { motion } from "framer-motion";
-
+import { pictureWhisperLinks, playTMLinks, quizzicleLinks, readiumLinks, workflowAutomationLinks } from '@/components/ui/project-logostack'
 
 import React from "react";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
-const people = [
-    {
-        id: 1,
-        name: "John Doe",
-        designation: "Software Engineer",
-    },
-    {
-        id: 2,
-        name: "Robert Johnson",
-        designation: "Product Manager",
-    },
-    {
-        id: 3,
-        name: "Jane Smith",
-        designation: "Data Scientist",
-    },
-    {
-        id: 4,
-        name: "Emily Davis",
-        designation: "UX Designer",
-    },
-    {
-        id: 5,
-        name: "Tyler Durden",
-        designation: "Soap Developer",
-    },
-    {
-        id: 6,
-        name: "Dora",
-        designation: "The Explorer",
-    },
-];
+
 
 
 const Projects = () => {
     const data = [
+
         {
-            title: "Mid 2025",
+            title: "2025",
+            content: (
+                <div className="space-y-2">
+                    <div>
+                        <p className=" text-2xl sm:text-[2.5rem] bg-gradient-to-b from-blue-500 to-neutral-500 bg-clip-text font-bold">
+                            PictureWhisperAI
+                        </p>
+                    </div>
+
+                    <div>
+                        <p className=" relative font-extralight z-30 text-neutral-700 dark:text-neutral-300 text-xl md:text-2xl max-w-6xl">
+                            This project appears to be an AI-powered image analysis application called `&quot;`PictureWhisper`&quot;` built with Next.js. It allows users to upload images and receive detailed AI-generated descriptions of their content. The application implements rate limiting for API calls and uses OpenAI`&apos;`s API for image analysis.
+                        </p>
+                    </div>
+
+                    <AnimatedTooltip items={pictureWhisperLinks} />
+                    <div className="flex gap-4 pt-4 relative z-30">
+                        <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE]  bg-white transform hover:cursor-pointer  hover:scale-105 hover:bg-slate-200   transition-all duration-300">
+                            <Link href="https://playTM.vercel.app"
+                                target="_blank">
+                                Live
+                            </Link>
+                        </button>
+                        <button className="px-4 py-2 text-xl font-bold rounded-2xl bg-[#457FDE]  text-white transform hover:cursor-pointer hover:scale-105 hover:bg-[#457FDE]   transition-all duration-300">
+                            <Link
+                                href="https://github.com/yourusername/playTM"
+                                target="_blank"
+                            >
+                                Github
+                            </Link>
+                        </button>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4 pt-4">
+                        <Image
+                            src={PictureWhisperAI3}
+                            alt="startup template"
+                            width={500}
+                            height={500}
+                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                        />
+
+                        <Image
+                            src={PictureWhisperAI1}
+                            alt="startup template"
+                            width={500}
+                            height={500}
+                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                        />
+
+                    </div>
+                </div>
+            ),
+        },
+        {
+            title: "Early 2025",
             content: (
                 <div className="space-y-2">
                     <div>
@@ -127,22 +135,25 @@ const Projects = () => {
             ),
         },
         {
-            title: "2025",
+            title: " 2024",
             content: (
                 <div className="space-y-2">
                     <div>
                         <p className=" text-2xl sm:text-[2.5rem] bg-gradient-to-b from-blue-500 to-neutral-500 bg-clip-text font-bold">
-                            PictureWhisperAI
+                            Readium
                         </p>
                     </div>
 
                     <div>
                         <p className=" relative font-extralight z-30 text-neutral-700 dark:text-neutral-300 text-xl md:text-2xl max-w-6xl">
-                            This project appears to be an AI-powered image analysis application called "PictureWhisper" built with Next.js. It allows users to upload images and receive detailed AI-generated descriptions of their content. The application implements rate limiting for API calls and uses OpenAI's API for image analysis.
+                            A light replica of how Medium works, like posting your blogs, you have a favourite blog want to mark it as favourite we got you,
+                            you will have your profile where you can see your posts with the faourite ones that you marked,
+                            Apart from these feature we have also integrated sharing feature here you can share blogs on any socials that you like.
                         </p>
                     </div>
 
-                    <AnimatedTooltip items={pictureWhisperLinks} />
+                    <AnimatedTooltip items={readiumLinks} />
+
                     <div className="flex gap-4 pt-4 relative z-30">
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE]  bg-white transform hover:cursor-pointer  hover:scale-105 hover:bg-slate-200   transition-all duration-300">
                             <Link href="https://playTM.vercel.app"
@@ -162,15 +173,14 @@ const Projects = () => {
 
                     <div className="grid grid-cols-2 gap-4 pt-4">
                         <Image
-                            src={PictureWhisperAI3}
+                            src={readium}
                             alt="startup template"
                             width={500}
                             height={500}
                             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                         />
-
                         <Image
-                            src={PictureWhisperAI1}
+                            src={readium}
                             alt="startup template"
                             width={500}
                             height={500}
@@ -182,7 +192,7 @@ const Projects = () => {
             ),
         },
         {
-            title: "2024",
+            title: "Mid 2024",
             content: (
                 <div className="space-y-2">
                     <div>

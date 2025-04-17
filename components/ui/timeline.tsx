@@ -1,10 +1,5 @@
 "use client";
-import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
-} from "motion/react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -12,7 +7,6 @@ interface TimelineEntry {
   content: React.ReactNode;
 }
 import { Roboto } from 'next/font/google'
-import { Spotlight } from "./spotlight";
 
 const roboto = Roboto({
   weight: ["100", '200', '400', '700', '900'],

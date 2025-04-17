@@ -1,10 +1,4 @@
 import React from 'react'
-import Link from 'next/link';
-import { FaLinkedinIn, FaSquareXTwitter } from 'react-icons/fa6';
-import { BsGithub } from 'react-icons/bs';
-import { MdEmail } from 'react-icons/md';
-import { Spotlight } from "@/components/ui/spotlight"
-// import resume from '../public/resume.pdf'
 import { Roboto } from 'next/font/google'
 import { FloatingDockDesktop } from './ui/floating-dock';
 import {
@@ -16,6 +10,7 @@ import {
     IconTerminal2,
 } from "@tabler/icons-react";
 import Image from 'next/image';
+import { Spotlight } from './ui/spotlight';
 const roboto = Roboto({
     weight: ['400', '700', '900'],
     subsets: ['latin'],

@@ -2,9 +2,9 @@
 import React from 'react'
 import {
     SiTypescript, SiNextdotjs, SiReact, SiPostgresql, SiMongodb, SiExpress,
-    SiAmazon, SiDocker, SiNginx, SiTailwindcss, SiRecoil, SiRedux,
+    SiAmazon, SiDocker, SiTailwindcss, SiRecoil,
     SiReactrouter, SiOpenai, SiVercel, SiRedis, SiNodedotjs, SiEslint,
-    SiCss3, SiTurborepo, SiZapier, SiGooglesheets, SiSlack, SiGmail, SiApachekafka, SiPrisma, SiJsonwebtokens
+    SiCss3, SiTurborepo, SiZapier, SiApachekafka, SiPrisma, SiJsonwebtokens
 } from 'react-icons/si';
 
 
@@ -242,6 +242,73 @@ export const quizzicleLinks = [
         name: "CSS3",
         icon: (
             <SiCss3 className="relative !m-0 h-8 w-8 rounded-full object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105" />
+        ),
+        href: "#",
+    },
+];
+
+export const readiumLinks = [
+    {
+        id: 1,
+        name: "React",
+        icon: (
+            <SiReact className="relative !m-0 h-8 w-8 rounded-full object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105" />
+        ),
+        href: "#",
+    },
+    {
+        id: 2,
+        name: "TypeScript",
+        icon: (
+            <SiTypescript className="relative !m-0 h-8 w-8 rounded-full object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105" />
+        ),
+        href: "#",
+    },
+    {
+        id: 3,
+        name: "AWS",
+        icon: (
+            <SiAmazon className="relative !m-0 h-8 w-8 rounded-full object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105" />
+        ),
+        href: "#",
+    },
+    {
+        id: 4,
+        name: "Express",
+        icon: (
+            <SiExpress className="relative !m-0 h-8 w-8 rounded-full object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105" />
+        ),
+        href: "#",
+    },
+    {
+        id: 5,
+        name: "Recoil",
+        icon: (
+            <SiRecoil className="relative !m-0 h-8 w-8 rounded-full object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105" />
+        ),
+        href: "#",
+    },
+    {
+        id: 6,
+        name: "Tailwind",
+        icon: (
+            <SiTailwindcss className="relative !m-0 h-8 w-8 rounded-full object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105" />
+        ),
+        href: "#",
+    },
+    {
+        id: 7,
+        name: "Docker",
+        icon: (
+            <SiDocker className="relative !m-0 h-8 w-8 rounded-full object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105" />
+        ),
+        href: "#",
+    },
+    {
+        id: 8,
+        name: "MongoDB",
+        icon: (
+            <SiMongodb className="relative !m-0 h-8 w-8 rounded-full object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105" />
         ),
         href: "#",
     },

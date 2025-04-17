@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import profile from "../public/profile.jpg"
 import { Roboto } from 'next/font/google'
 
@@ -21,31 +22,34 @@ const About = () => {
                     {/* Main content */}
                     <div className="mt-12 grid grid-cols-1 md:grid-cols-2 space-x-16 items-center">
                         <div className="relative flex justify-center items-center ">
-                            <img
-                                src={profile.src}
+                            <Image
+                                src={profile}
                                 alt="Pritam Chakroborty"
                                 className="w-[80%] h-[80%]  bg-none rounded-full shadow-2xl shadow-neutral-500 dark:shadow-neutral-900/50"
+                                width={176}
+                                height={176}
+                                priority
                             />
                         </div>
 
                         {/* Description */}
                         <div className={`${roboto.className} relative font-extralight z-30 pt-7  text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl`}>
                             <p>
-                                I'm a FullStack Developer from Kolkata (India). I completed Frontend Career Path
+                                I&apos;m a FullStack Developer from Kolkata (India). I completed Frontend Career Path
                                 from Scrimba in 2022 and then started my Fullstack career from 100xdevs. Recently
-                                i completed AI Engineer Path from scrimba and building projects on it.
+                                I completed AI Engineer Path from scrimba and building projects on it.
                             </p>
                             <br />
                             <p>
                                 In this fast paced era of technology my go to method for keeping my toe ahead is building
-                                projects. I'm currently enhancing my knowledge on Generative AI, I really found it fasinating
+                                projects. I&apos;m currently enhancing my knowledge on Generative AI, I really found it fascinating
                                 and on my way to explore more about vector database, embeddings and lot more.
 
                             </p>
                             <br />
                             <p>
-                                I'm inspired by people who seek creativity in technology and keen to learn
-                                something new. If that sounds like you, let's get connect and have some chat.
+                                I&apos;m inspired by people who seek creativity in technology and keen to learn
+                                something new. If that sounds like you, let&apos;s get connect and have some chat.
                             </p>
                         </div>
                     </div>
@@ -55,4 +59,4 @@ const About = () => {
     );
 };
 
-export default About; 
+export default About;

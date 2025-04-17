@@ -49,9 +49,12 @@ const Footer = () => {
                     {/* Tagline */}
                     <div className="text-center mt-4">
                         <p className="text-gray-400 italic">
-                            "Building the future, one line of code at a time."
+                            `&quot;`Building the future, one line of code at a time.`&quot;`
                         </p>
                         <div className="w-12 h-0.5 bg-gray-600 mx-auto mt-2"></div>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                            Built with &quot;made with love&quot; by &quot;Pritam&quot;
+                        </p>
                     </div>
                 </div>
             </div>
@@ -60,4 +63,4 @@ const Footer = () => {
     );
 };
 
-export default Footer; 
+export default Footer;

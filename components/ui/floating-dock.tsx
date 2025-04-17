@@ -26,7 +26,7 @@ export const FloatingDockDesktop = ({
     items: { title: string; icon: React.ReactNode; href: string }[];
     className?: string;
 }) => {
-    let mouseY = useMotionValue(Infinity);
+    const mouseY = useMotionValue(Infinity);
 
     return (
         <motion.div
@@ -63,15 +63,15 @@ function VerticalIconContainer({
     icon: React.ReactNode;
     href: string;
 }) {
-    let ref = useRef<HTMLDivElement>(null);
+    const ref = useRef<HTMLDivElement>(null);
 
-    let distance = useTransform(mouseY, (val) => {
-        let bounds = ref.current?.getBoundingClientRect() ?? { y: 0, height: 0 };
+    const distance = useTransform(mouseY, (val) => {
+        const bounds = ref.current?.getBoundingClientRect() ?? { y: 0, height: 0 };
         return val - bounds.y - bounds.height / 2;
     });
 
-    let sizeTransform = useTransform(distance, [-150, 0, 150], [60, 100, 60]);
-    let iconSizeTransform = useTransform(distance, [-150, 0, 150], [28, 48, 28]);
+    const sizeTransform = useTransform(distance, [-150, 0, 150], [60, 100, 60]);
+    const iconSizeTransform = useTransform(distance, [-150, 0, 150], [28, 48, 28]);
 
     const size = useSpring(sizeTransform, {
         mass: 0.1,
