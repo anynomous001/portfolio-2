@@ -8,7 +8,6 @@ import {
     IconBrandLinkedin,
     IconBrandX,
     IconFile3d,
-    IconTerminal2,
 } from "@tabler/icons-react";
 import Image from 'next/image';
 // import { Spotlight } from './ui/spotlight';
