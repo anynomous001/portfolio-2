@@ -10,7 +10,6 @@ import {
     IconBrandX,
     IconFile3d,
 } from "@tabler/icons-react";
-import Image from 'next/image';
 // import { Spotlight } from './ui/spotlight';
 import { Spotlight } from "./ui/spotlight-new";
 import Link from 'next/link';
