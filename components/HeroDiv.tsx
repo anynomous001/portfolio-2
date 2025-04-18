@@ -15,6 +15,11 @@ import Image from 'next/image';
 import { Spotlight } from "./ui/spotlight-new";
 import Link from 'next/link';
 import SocialSidebar from './ui/social-sidebar';
+import {
+    AnimatedSpan,
+    Terminal,
+    TypingAnimation,
+} from "@/components/magicui/terminal";
 
 
 const roboto = Roboto({
@@ -79,31 +84,89 @@ const HeroDiv = () => {
         <div className="relative w-full min-h-screen">
             <SocialSidebar isOpen={isOpen} onClose={onClose} />
             <Spotlight />
+
             <div className="w-full px-4 md:px-8 lg:px-16">
-                <div className="flex flex-col items-center justify-center min-h-screen pt-16 md:pt-20 lg:pt-24">
-                    {/* Name heading with responsive font sizes */}
-                    <div className="text-center">
-                        <h1 className={`${roboto.className} relative z-20 bg-gradient-to-b from-black to-gray-300/80 bg-clip-text font-bold  text-transparent dark:from-white dark:to-slate-900/10
-                            text-5xl sm:text-7xl md:text-[80px] lg:text-[100px] leading-tight`}>
-                            <span className="block mb-2">Pritam</span>
-                            <span className="block">Chakroborty</span>
-                        </h1>
-                    </div>
 
-                    {/* Subtitle with responsive design */}
-                    <div className="mt-6 md:mt-8 lg:mt-10 w-full max-w-3xl">
-                        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-semibold bg-white/90 dark:bg-transparent p-3transparentrounded-lg shadow-lg relative z-20 text-black dark:text-white">
-                            A software engineer, I build things for the web
-                        </p>
-                    </div>
+                {/* Navigation - Floating dock for larger screens */}
+                <div className="hidden lg:block pt-12 lg:pt-16">
+                    <FloatingDockDesktop items={links} />
+                </div>
 
-                    {/* Navigation - Floating dock for larger screens */}
-                    <div className="hidden lg:block mt-12 lg:mt-16">
-                        <FloatingDockDesktop items={links} />
-                    </div>
+                <div className='flex flex-col'>
+                    <div className="flex justify-center min-h-[60%] pt-60 lg:pt-40 lg:gap-30">
+                        {/* Name heading with responsive font sizes */}
+                        <div className="text-center lg:text-left pl-0 lg:pl-20">
+                            <h1 className={`${roboto.className} relative z-20 bg-gradient-to-b from-black to-gray-300/80 bg-clip-text font-bold  text-transparent dark:from-white dark:to-slate-900/10
+                            text-5xl sm:text-7xl md:text-[80px] lg:text-[80px] leading-tight`}>
+                                <span className="block mb-2">Pritam</span>
+                                <span className="block">Chakroborty</span>
+                            </h1>
+                            <div className="mt-6 md:mt-8 lg:mt-10 w-full max-w-3xl">
+                                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl  font-semibold bg-white/90 dark:bg-transparent p-3transparentrounded-lg shadow-lg relative z-20 text-black dark:text-white">
+                                    A software engineer, I build things for the web
+                                </p>
+                            </div>
+                        </div>
 
-                    {/* Mobile Navigation Buttons */}
-                    <div className="lg:hidden mt-8 flex flex-col items-center gap-4 w-full px-4">
+                        {/* Subtitle with responsive design */}
+
+
+                        <Terminal className='hidden lg:block'>
+                            <TypingAnimation className='dark:text-white'>&gt; pnpm dlx shadcn@latest init</TypingAnimation>
+
+                            <AnimatedSpan delay={1500} className="text-green-500">
+                                <span>✔ Preflight checks.</span>
+                            </AnimatedSpan>
+
+                            <AnimatedSpan delay={2000} className="text-green-500">
+                                <span>✔ Verifying framework. Found Next.js.</span>
+                            </AnimatedSpan>
+
+                            <AnimatedSpan delay={2500} className="text-green-500">
+                                <span>✔ Validating Tailwind CSS.</span>
+                            </AnimatedSpan>
+
+                            <AnimatedSpan delay={3000} className="text-green-500">
+                                <span>✔ Validating import alias.</span>
+                            </AnimatedSpan>
+
+                            <AnimatedSpan delay={3500} className="text-green-500">
+                                <span>✔ Writing components.json.</span>
+                            </AnimatedSpan>
+
+                            <AnimatedSpan delay={4000} className="text-green-500">
+                                <span>✔ Checking registry.</span>
+                            </AnimatedSpan>
+
+                            <AnimatedSpan delay={4500} className="text-green-500">
+                                <span>✔ Updating tailwind.config.ts</span>
+                            </AnimatedSpan>
+
+                            <AnimatedSpan delay={5000} className="text-green-500">
+                                <span>✔ Updating app/globals.css</span>
+                            </AnimatedSpan>
+
+                            <AnimatedSpan delay={5500} className="text-green-500">
+                                <span>✔ Installing dependencies.</span>
+                            </AnimatedSpan>
+
+                            <AnimatedSpan delay={6000} className="text-blue-500">
+                                <span>ℹ Updated 1 file:</span>
+                                <span className="pl-2">- lib/utils.ts</span>
+                            </AnimatedSpan>
+
+                            <TypingAnimation delay={6500} className=" dark:text-white">
+                                Success! Project initialization completed.
+                            </TypingAnimation>
+
+                            <TypingAnimation delay={7000} className="dark:text-white ">
+                                You may now add components.
+                            </TypingAnimation>
+                        </Terminal>
+
+
+                    </div>
+                    <div className="lg:hidden mt-8 flex flex-col items-center gap-4 w-full px-4 pt-20">
                         <Link
                             href="/resume.pdf"
                             target="_blank"
@@ -119,6 +182,7 @@ const HeroDiv = () => {
                         </button>
                     </div>
                 </div>
+
             </div>
         </div>
     )
