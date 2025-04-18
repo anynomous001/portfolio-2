@@ -92,7 +92,7 @@ const HeroDiv = () => {
                     <div className="flex justify-center min-h-[60%] pt-48 lg:pt-40 lg:gap-30">
                         <div className="text-center lg:text-left pl-0 lg:pl-20">
                             <h1 className={`${roboto.className} relative z-20 bg-gradient-to-b from-black to-gray-300/80 bg-clip-text font-bold  text-transparent dark:from-white dark:to-slate-900/10
-                            text-5xl sm:text-7xl md:text-[80px] lg:text-[80px] leading-tight`}>
+                            text-5xl sm:text-7xl md:text-[80px] lg:text-[100px] leading-tight`}>
                                 <span className="block mb-2">Pritam</span>
                                 <span className="block">Chakroborty</span>
                             </h1>
@@ -103,7 +103,6 @@ const HeroDiv = () => {
                             </div>
                         </div>
 
-                        {/* Subtitle with responsive design */}
 
 
                         <Terminal className='hidden lg:block'>
