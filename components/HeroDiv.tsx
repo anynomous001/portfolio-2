@@ -5,6 +5,7 @@ import { Roboto } from 'next/font/google'
 import { FloatingDockDesktop } from './ui/floating-dock';
 import {
     IconBrandGithub,
+    IconBrandGmail,
     IconBrandLinkedin,
     IconBrandX,
     IconFile3d,
@@ -34,7 +35,7 @@ const HeroDiv = () => {
             icon: (
                 <IconFile3d className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "/resume.pdf",
         },
         {
             title: "LinkedIn",
@@ -44,16 +45,12 @@ const HeroDiv = () => {
             href: "https://www.linkedin.com/in/pritamchakroborty/",
         },
         {
-            title: "Aceternity UI",
+            title: "E-mail",
             icon: (
-                <Image
-                    src="https://assets.aceternity.com/logo-dark.png"
-                    width={20}
-                    height={20}
-                    alt="Aceternity Logo"
-                />
+                <IconBrandGmail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+
             ),
-            href: "#",
+            href: "mailto:chakrobortypritam1@gmail.com",
         },
 
 
@@ -92,8 +89,7 @@ const HeroDiv = () => {
                 </div>
 
                 <div className='flex flex-col'>
-                    <div className="flex justify-center min-h-[60%] pt-60 lg:pt-40 lg:gap-30">
-                        {/* Name heading with responsive font sizes */}
+                    <div className="flex justify-center min-h-[60%] pt-48 lg:pt-40 lg:gap-30">
                         <div className="text-center lg:text-left pl-0 lg:pl-20">
                             <h1 className={`${roboto.className} relative z-20 bg-gradient-to-b from-black to-gray-300/80 bg-clip-text font-bold  text-transparent dark:from-white dark:to-slate-900/10
                             text-5xl sm:text-7xl md:text-[80px] lg:text-[80px] leading-tight`}>

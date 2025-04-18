@@ -3,7 +3,11 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import React from 'react'
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6"
-import { HiDocument, HiMail } from "react-icons/hi"
+import { HiMail } from "react-icons/hi"
+import {
+
+    IconFile3d,
+} from "@tabler/icons-react";
 
 interface SocialSidebarProps {
     isOpen: boolean;
@@ -12,6 +16,11 @@ interface SocialSidebarProps {
 
 const socialLinks = [
     {
+        name: 'Resume',
+        icon: <IconFile3d className="w-6 h-6" />,
+        href: '/resume.pdf'
+    },
+    {
         name: 'GitHub',
         icon: <FaGithub className="w-6 h-6" />,
         href: 'https://github.com/anynomous001'
@@ -19,22 +28,17 @@ const socialLinks = [
     {
         name: 'LinkedIn',
         icon: <FaLinkedin className="w-6 h-6" />,
-        href: 'https://linkedin.com/in/pritamchakroborty'
+        href: 'https://www.linkedin.com/in/pritamchakroborty/'
     },
     {
         name: 'Twitter',
         icon: <FaXTwitter className="w-6 h-6" />,
-        href: 'https://twitter.com/Pritamchak001'
+        href: 'https://x.com/Pritamchak001?t=SRRGAHleTY8DEpAuJOhdqQ'
     },
     {
         name: 'Email',
         icon: <HiMail className="w-6 h-6" />,
-        href: 'mailto:Chakrobortypritam12@gmail.com'
-    },
-    {
-        name: 'Resume',
-        icon: <HiDocument className="w-6 h-6" />,
-        href: '/resume.pdf'
+        href: 'mailto:Chakrobortypritam1@gmail.com'
     }
 ]
 

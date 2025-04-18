@@ -31,7 +31,7 @@ const Projects = () => {
 
                     <div>
                         <p className="relative font-extralight z-30 text-neutral-700 dark:text-neutral-300 text-xl md:text-2xl max-w-6xl">
-                            This project appears to be an AI-powered image analysis application called `&quot;`PictureWhisper`&quot;` built with Next.js. It allows users to upload images and receive detailed AI-generated descriptions of their content. The application implements rate limiting for API calls and uses OpenAI`&apos;`s API for image analysis.
+                            This project appears to be an AI-powered image analysis application called &quot;PictureWhisper &quot; built with Next.js. It allows users to upload images and receive detailed AI-generated descriptions of their content. The application implements rate limiting for API calls and uses OpenAI`&apos;`s API for image analysis.
                         </p>
                     </div>
 
@@ -291,7 +291,7 @@ const Projects = () => {
     ];
     return (
         <div className="w-full flex justify-center">
-            <div className="w-[80%]" data-aos="fade-up">
+            <div className="w-full lg:w-[80%] " data-aos="fade-up">
                 <Timeline data={data} />
             </div>
         </div>
