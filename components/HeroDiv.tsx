@@ -5,10 +5,9 @@ import { Roboto } from 'next/font/google'
 import { FloatingDockDesktop } from './ui/floating-dock';
 import {
     IconBrandGithub,
+    IconBrandLinkedin,
     IconBrandX,
-    IconExchange,
-    IconHome,
-    IconNewSection,
+    IconFile3d,
     IconTerminal2,
 } from "@tabler/icons-react";
 import Image from 'next/image';
@@ -25,26 +24,20 @@ const roboto = Roboto({
 
 const HeroDiv = () => {
     const links = [
+
         {
-            title: "Home",
+            title: "Resume",
             icon: (
-                <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+                <IconFile3d className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
             href: "#",
         },
         {
-            title: "Products",
+            title: "LinkedIn",
             icon: (
-                <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+                <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
-        },
-        {
-            title: "Components",
-            icon: (
-                <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "#",
+            href: "https://www.linkedin.com/in/pritamchakroborty/",
         },
         {
             title: "Aceternity UI",
@@ -58,27 +51,21 @@ const HeroDiv = () => {
             ),
             href: "#",
         },
-        {
-            title: "Changelog",
-            icon: (
-                <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-            ),
-            href: "#",
-        },
+
 
         {
             title: "Twitter",
             icon: (
                 <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "https://x.com/Pritamchak001?t=SRRGAHleTY8DEpAuJOhdqQ",
         },
         {
             title: "GitHub",
             icon: (
                 <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "https://github.com/anynomous001",
         },
     ];
 
@@ -96,7 +83,7 @@ const HeroDiv = () => {
                 <div className="flex flex-col items-center justify-center min-h-screen pt-16 md:pt-20 lg:pt-24">
                     {/* Name heading with responsive font sizes */}
                     <div className="text-center">
-                        <h1 className={`${roboto.className} relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text font-bold text-transparent
+                        <h1 className={`${roboto.className} relative z-20 bg-gradient-to-b from-black to-gray-300/80 bg-clip-text font-bold  text-transparent dark:from-white dark:to-slate-900/10
                             text-5xl sm:text-7xl md:text-[80px] lg:text-[100px] leading-tight`}>
                             <span className="block mb-2">Pritam</span>
                             <span className="block">Chakroborty</span>

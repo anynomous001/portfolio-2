@@ -33,7 +33,7 @@ export const FloatingDockDesktop = ({
             onMouseMove={(e) => mouseY.set(e.clientY)}
             onMouseLeave={() => mouseY.set(Infinity)}
             className={cn(
-                "fixed left-8 top-0 h-screen hidden md:flex flex-col items-center justify-center  ",
+                "fixed left-10 top-0 h-screen hidden md:flex flex-col items-center justify-center  ",
                 "bg-gray-50 dark:bg-transparent py-4 px-3 ",
                 className
             )}
