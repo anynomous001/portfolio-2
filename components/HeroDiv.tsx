@@ -102,7 +102,7 @@ const HeroDiv = () => {
                                 <AuroraText className='font-bold text-2xl md:text-3xl lg:text-4xl'>Software Developer</AuroraText>
                                 <p className="text-lg sm:text-xl md:text-2xl pt-8  font-thin bg-white/90 dark:bg-transparent p-3transparentrounded-lg shadow-lg relative z-20 text-black dark:text-white">
                                     The beauty of code is its power to transform abstract ideas into tangible solutions.
-                                    I don't just dream of possibilities— <AuroraText>I build them.
+                                    I don&apos;t just dream of possibilities— <AuroraText>I build them.
                                     </AuroraText>
                                 </p>
                             </div>
