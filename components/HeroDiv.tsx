@@ -2,6 +2,10 @@
 
 import React from 'react'
 import { Roboto } from 'next/font/google'
+import { AuroraText } from "@/components/magicui/aurora-text";
+
+
+
 import { FloatingDockDesktop } from './ui/floating-dock';
 import {
     IconBrandGithub,
@@ -10,7 +14,6 @@ import {
     IconBrandX,
     IconFile3d,
 } from "@tabler/icons-react";
-// import { Spotlight } from './ui/spotlight';
 import { Spotlight } from "./ui/spotlight-new";
 import Link from 'next/link';
 import SocialSidebar from './ui/social-sidebar';
@@ -96,8 +99,11 @@ const HeroDiv = () => {
                                 <span className="block">Chakroborty</span>
                             </h1>
                             <div className="mt-6 md:mt-8 lg:mt-10 w-full max-w-3xl">
-                                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl  font-semibold bg-white/90 dark:bg-transparent p-3transparentrounded-lg shadow-lg relative z-20 text-black dark:text-white">
-                                    A software engineer, I build things for the web
+                                <AuroraText className='font-bold text-2xl md:text-3xl lg:text-4xl'>Software Developer</AuroraText>
+                                <p className="text-lg sm:text-xl md:text-2xl pt-8  font-thin bg-white/90 dark:bg-transparent p-3transparentrounded-lg shadow-lg relative z-20 text-black dark:text-white">
+                                    The beauty of code is its power to transform abstract ideas into tangible solutions.
+                                    I don't just dream of possibilities— <AuroraText>I build them.
+                                    </AuroraText>
                                 </p>
                             </div>
                         </div>

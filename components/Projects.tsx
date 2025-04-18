@@ -38,12 +38,12 @@ const Projects = () => {
                     <AnimatedTooltip items={pictureWhisperLinks} />
                     <div className="flex gap-4 pt-4 relative z-30">
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE] bg-white transform hover:cursor-pointer hover:scale-105 hover:bg-slate-200 transition-all duration-300">
-                            <Link href="https://playTM.vercel.app" target="_blank">
+                            <Link href="https://image-whisper-ai.vercel.app/" target="_blank">
                                 Live
                             </Link>
                         </button>
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl bg-[#457FDE] text-white transform hover:cursor-pointer hover:scale-105 hover:bg-[#457FDE] transition-all duration-300">
-                            <Link href="https://github.com/yourusername/playTM" target="_blank">
+                            <Link href="https://github.com/anynomous001/ImageWhisperAI" target="_blank">
                                 Github
                             </Link>
                         </button>
@@ -75,7 +75,7 @@ const Projects = () => {
                 <div className="space-y-2">
                     <div>
                         <p className="text-2xl sm:text-[2.5rem] bg-gradient-to-b from-blue-500 to-neutral-500 bg-clip-text font-bold lg:text-[2.5rem] md:text-2xl sm:text-xl">
-                            Workflow Automation Suite
+                            Zapier Automation
                         </p>
                     </div>
 
@@ -91,15 +91,15 @@ const Projects = () => {
                     <AnimatedTooltip items={workflowAutomationLinks} />
 
                     <div className="flex gap-4 pt-4 relative z-30">
-                        <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE] bg-white transform hover:cursor-pointer hover:scale-105 hover:bg-slate-200 transition-all duration-300">
-                            <Link href="https://zapier-automation.vercel.app"
+                        <button disabled className="px-4 py-2 text-xl font-bold rounded-2xl text-gray-400 bg-gray-100 cursor-not-allowed">
+                            <Link aria-disabled href="https://zapier-automation.vercel.app"
                                 target="_blank">
                                 Live
                             </Link>
                         </button>
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl bg-[#457FDE] text-white transform hover:cursor-pointer hover:scale-105 hover:bg-[#457FDE] transition-all duration-300">
                             <Link
-                                href="https://github.com/yourusername/zapier-automation"
+                                href="https://github.com/anynomous001/zapier_project"
                                 target="_blank"
                             >
                                 Github
@@ -148,14 +148,14 @@ const Projects = () => {
 
                     <div className="flex gap-4 pt-4 relative z-30">
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE] bg-white transform hover:cursor-pointer hover:scale-105 hover:bg-slate-200 transition-all duration-300">
-                            <Link href="https://playTM.vercel.app"
+                            <Link href="https://readium.techtovium.com/"
                                 target="_blank">
                                 Live
                             </Link>
                         </button>
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl bg-[#457FDE] text-white transform hover:cursor-pointer hover:scale-105 hover:bg-[#457FDE] transition-all duration-300">
                             <Link
-                                href="https://github.com/yourusername/playTM"
+                                href="https://github.com/anynomous001/Medium_Full-Stack"
                                 target="_blank"
                             >
                                 Github
@@ -204,12 +204,12 @@ const Projects = () => {
 
                     <div className="flex gap-4 pt-4 relative z-30">
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE] bg-white transform hover:cursor-pointer hover:scale-105 hover:bg-slate-200 transition-all duration-300">
-                            <Link href="https://playTM.vercel.app" target="_blank">
+                            <Link href="https://playtm.vercel.app/" target="_blank">
                                 Live
                             </Link>
                         </button>
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl bg-[#457FDE] text-white transform hover:cursor-pointer hover:scale-105 hover:bg-[#457FDE] transition-all duration-300">
-                            <Link href="https://github.com/yourusername/playTM" target="_blank">
+                            <Link href="https://github.com/anynomous001/Turborepo_Paytm" target="_blank">
                                 Github
                             </Link>
                         </button>
@@ -254,14 +254,14 @@ const Projects = () => {
 
                     <div className="flex gap-4 pt-4 relative z-30">
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl text-[#457FDE] bg-white transform hover:cursor-pointer hover:scale-105 hover:bg-slate-200 transition-all duration-300">
-                            <Link href="https://playTM.vercel.app"
+                            <Link href="https://spectacular-kataifi-8d603e.netlify.app/"
                                 target="_blank">
                                 Live
                             </Link>
                         </button>
                         <button className="px-4 py-2 text-xl font-bold rounded-2xl bg-[#457FDE] text-white transform hover:cursor-pointer hover:scale-105 hover:bg-[#457FDE] transition-all duration-300">
                             <Link
-                                href="https://github.com/yourusername/playTM"
+                                href="https://github.com/anynomous001/Quiz"
                                 target="_blank"
                             >
                                 Github
