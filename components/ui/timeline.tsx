@@ -1,6 +1,8 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { TextReveal } from "@/components/magicui/text-reveal";
+
 
 interface TimelineEntry {
   title: string;
@@ -42,9 +44,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         ref={containerRef}
       >
         <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-          <h2 className=" relative font-bold z-30 text-5xl  sm:text-8xl bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent  mb-4 ">
+          <TextReveal>
             Let me take you through my technical journey
-          </h2>
+          </TextReveal>
           <p className=" relative font-extralight z-30 text-neutral-700 dark:text-neutral-300 text-2xl md:text-3xl max-w-6xl">
             I&apos;ve been working on various projects for the past 2.5 years. Here&apos;s
             a timeline of my journey.

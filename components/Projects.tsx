@@ -30,7 +30,7 @@ const Projects = () => {
                     </div>
 
                     <div>
-                        <p className="relative font-extralight z-30 text-neutral-700 dark:text-neutral-300 text-xl md:text-lg sm:text-base max-w-6xl">
+                        <p className="relative font-extralight z-30 text-neutral-700 dark:text-neutral-300 text-xl md:text-2xl max-w-6xl">
                             This project appears to be an AI-powered image analysis application called `&quot;`PictureWhisper`&quot;` built with Next.js. It allows users to upload images and receive detailed AI-generated descriptions of their content. The application implements rate limiting for API calls and uses OpenAI`&apos;`s API for image analysis.
                         </p>
                     </div>

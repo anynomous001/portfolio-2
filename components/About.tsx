@@ -10,7 +10,7 @@ const roboto = Roboto({
 const About = () => {
     return (
         <section className="min-h-screen w-full flex justify-center z-30   py-20 px-4 md:px-8 lg:px-16">
-            <div className="max-w-7xl mx-auto w-[80%] md:w-full">
+            <div className="max-w-7xl mx-auto w-[90%] ">
                 <div className="flex flex-col gap-4">
 
                     <div className="space-y-2">
@@ -20,7 +20,7 @@ const About = () => {
                     </div>
 
                     {/* Main content */}
-                    <div className="mt-12 grid grid-cols-1 md:grid-cols-2 space-x-16 items-center">
+                    <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 space-x-16 items-center">
                         <div className="relative flex justify-center items-center ">
                             <Image
                                 src={profile}
